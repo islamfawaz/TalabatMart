@@ -16,7 +16,7 @@ namespace Infrastructure.Persistence
             services.AddDbContext<StoreDbContext>(options =>
             {
                 options.UseSqlServer(configuration.GetConnectionString("StoreContext"));
-
+                 
             });
             services.AddScoped<IStoreDbInitializer, StoreDbInitializer>();
             services.AddScoped<ISaveChangesInterceptor, CustomSaveChangeInterceptor>();
